@@ -1,4 +1,4 @@
-<!-- This one is connected to Account Object and can manipulate record using Visualforce -->
+<!-- This one is connected to Account Object and can edit record using Visualforce -->
 <apex:page showHeader="false" standardController="Account">
     <apex:form >
         <table border="1">
