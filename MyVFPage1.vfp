@@ -1,0 +1,40 @@
+<!-- 
+standardStylesheets="true", may be omitted since it's default.
+It means Visualforce stylesheet is in effect giving the page a Salesforce look and feel.
+-->
+<apex:page standardStylesheets="true">
+    <h1>
+        MyVFPage1 Test
+    </h1>
+    <apex:pageBlock title="A Block Title">
+        <apex:pageBlockSection title="First Section Title">
+            <h2>
+                Variables and Expression Examples
+            </h2>
+            <br />
+            {! $User.FirstName} {!$User.LastName }
+            <br/>
+            {! $User.FirstName & '-' & $User.LastName }
+            <br />
+            {! IF ($User.isActive, $User.username, 'inactive')}
+            <br />
+        </apex:pageBlockSection>
+        
+        <apex:pageBlockSection title="Second Section Title">
+            Hello World in Second Section!
+            <p>Today's Date is {!TODAY()}</p>
+            <p>Today's Date + 7 days is {!TODAY() + 7}</p>
+            <p>Current Year is {!YEAR(TODAY())}</p>
+            <p>salesforce.com CONTAINS force.com? {!CONTAINS('salesforce.com', 'force.com')}</p>
+            <p>
+                Conditional rendering:<br />
+                IF( (CONDITION), TRUE, FALSE)
+            </p>
+            <p>
+                IF (CONTAINS('salesforce.com', 'force.com'), 'Yes', 'No')
+                <br />
+                {! IF (CONTAINS('salesforce.com', 'force.com'), 'Yes', 'No')}
+            </p>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:page>
