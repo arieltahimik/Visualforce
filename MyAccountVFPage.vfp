@@ -1,0 +1,18 @@
+<!-- This one is connected to Account Object and can manipulate record using Visualforce -->
+<apex:page showHeader="false" standardController="Account">
+    <apex:form >
+        <table border="1">
+            <tr>
+                <td>Account Name</td>
+                <td>
+                    <apex:inputField value="{!Account.Name}"/>
+                </td>
+            </tr>
+            <br/>
+            <tr>
+                <td><apex:commandButton value="Save" action="{!save}"/></td>
+                <td><apex:commandButton value="Cancel" action="{!cancel}"/></td>
+            </tr>
+        </table>
+    </apex:form>
+</apex:page>
