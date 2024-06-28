@@ -1,0 +1,27 @@
+<apex:page standardController="Account" recordSetVar="accountList">
+	<apex:form>
+        <apex:pageBlock title="Accounts List" id="accounts_list">
+            Filter:
+            <apex:selectList value="{! filterId}" size="1">
+                <apex:selectOptions value="{! listViewOptions}" />
+                <apex:actionSupport event="onchange" reRender="accounts_list"/>
+            </apex:selectList>
+
+            <apex:pageBlockTable value="{!accountList}" var="acc">
+                <apex:column value="{! acc.Name}"/>
+                <apex:column value="{! acc.Phone}"/>
+                <apex:column value="{! acc.Rating}"/>
+                <apex:column value="{! acc.Type}"/>
+            </apex:pageBlockTable>
+            
+        </apex:pageBlock>
+    </apex:form>    
+</apex:page>
+
+<!--
+    standardController="Account"  //connection to 'Account' object
+    recordSetVar="accountList"    //the record set will be called as 'accountList'
+    id="accounts_list"            //the whole page block's id is 'accounts_list'
+    pageBlockTable                //responsible for displaying data in table layout
+    var=acc                       //'acc' is a variable used to access each field
+-->
