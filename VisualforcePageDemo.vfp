@@ -1,0 +1,32 @@
+<apex:page showHeader="false" sidebar="false" standardStylesheets="true">
+    
+    <apex:pageBlock title="Block One">
+        <p>{! TODAY() }</p>
+        {! IF ($User.Country == 'US', 'Hello', 'Namaste')}
+        {! $User.FirstName} {! $User.LastName}
+        <br/><br/>
+        
+        <!-- Sections inside a block -->
+        <apex:pageBlockSection title="Section Display" columns="3">
+            <apex:pageBlockSectionItem>Section Item 1</apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem>Section Item 2</apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem>Section Item 3</apex:pageBlockSectionItem>
+        </apex:pageBlockSection>
+        
+        <apex:pageBlockSection title="Section Two" rendered="false">
+            Section Two
+        </apex:pageBlockSection>
+        
+    </apex:pageBlock>
+    
+</apex:page>
+
+<!--
+003Hs00004fNd3LIAS : John Connor Id
+showHeader & sidebar : these affect Salesforce Classic display (tabs & sidebar menu)
+{! } : merge field format to bind variables
+note : visualforce is case-insensitive
+classic : add '/apex/VisualforcePageDemo' to view VF page using URL
+lightning (run in js console) : $A.get('e.force:navigateToURL').setParams({'url' : '/apex/VisualforcePageDemo'}).fire(); 
+Above is using the Aura framework ($A)
+-->
