@@ -1,3 +1,5 @@
+// Called by ConListController.vfp
+
 public class ContactController {
     private String sortOrder='FirstName';
     
