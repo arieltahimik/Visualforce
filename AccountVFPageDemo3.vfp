@@ -1,0 +1,24 @@
+<apex:page standardController="Account" extensions="AccVFPageExtension" action="{!URLreturn}">
+    <apex:form >
+        {!Message}
+        <apex:pageBlock title="Account">
+            <apex:pageBlockSection columns="1">
+                <apex:inputField value="{!Account.Name}"/>
+                <apex:inputField value="{!Account.Phone}"/>
+                <apex:inputField value="{!Account.Rating}"/>                                
+            </apex:pageBlockSection>        
+            <apex:pageBlockButtons >            
+                <apex:commandButton value="Save" action="{!save}"/>
+                <apex:commandButton value="Cancel" action="{!cancel}" immediate="true"/>
+                <apex:commandButton value="Custom Cancel" action="{!customCancel}" immediate="true"/>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
+<!-- 
+- Extension and Global action example, calls 'AccVFPageExtension' apex class.
+- If you add "&id=0012E00002mbXCEQA2" at the end of the URL, the record will load.
+- The URL referred to is the URL of the Visualforce page (AccountVFPageDemo3)
+- customCancel will redirect to a custom page.
+- Standard cancel will redirect to standard Accounts UI page
+-->
