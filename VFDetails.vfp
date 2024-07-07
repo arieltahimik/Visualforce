@@ -1,0 +1,24 @@
+<apex:page standardController="Account">
+    
+    <apex:detail relatedList="false"></apex:detail>
+    
+    <apex:relatedList list="Opportunities" />
+
+    <apex:relatedList list="Contacts">
+        <apex:facet name="header">Titles can be overriden with facets</apex:facet>
+    </apex:relatedList>
+
+    <apex:relatedList list="Cases" title="Or you can keep the image, but change the text" />
+    
+    <apex:pageBlock>
+        View Details and/or Related Lists for {!account.name}:
+        <apex:outputLink value="/apex/VFDetails?id=001Hs00003Uamg1IAB"> Here </apex:outputLink>
+        <apex:outputLink value="{!URLFOR($Action.Account.View, Account.Id)}"> View in Accounts UI Tab </apex:outputLink>
+    </apex:pageBlock>
+    
+</apex:page>
+
+<!--
+TO VIEW:
+https://mindful-narwhal-ex7nju-dev-ed--c.trailblaze.vf.force.com/apex/VFDetails?id=001Hs00003Uamg1IAB
+-->
