@@ -1,0 +1,11 @@
+<apex:page id="thePage">
+    <!-- switchTypes: client, server (default), ajax -->
+    <apex:tabPanel switchType="client">
+        <apex:tab label="Home" name="home1" id="tabOne">
+            We are the champions, we are the champions, no time for losers.
+        </apex:tab>
+        <apex:tab label="About" name="about1" id="tabTwo">
+            We will, we will, rock you.
+        </apex:tab>
+    </apex:tabPanel>
+</apex:page>
