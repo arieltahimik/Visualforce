@@ -1,0 +1,20 @@
+<apex:page >
+    <apex:toolbar id="theToolbar">
+        <apex:outputText value="Sample Toolbar"></apex:outputText>
+        
+        <apex:toolbarGroup itemSeparator="line" id="theToolbarlinks">
+            <apex:outputLink value="https://www.salesforce.com">Salesforce</apex:outputLink>
+            <apex:outputLink value="https://login.salesforce.com">Login to Salesforce</apex:outputLink>
+        </apex:toolbarGroup>   
+        
+        <apex:toolbarGroup itemSeparator="line" location="right" id="toolbargp2">
+            <apex:form >
+            	<apex:inputText id="theInputText">Enter Text:&nbsp;</apex:inputText>           	
+            	<apex:commandLink value="Search"/>
+            </apex:form>
+        </apex:toolbarGroup>   
+        
+    </apex:toolbar>
+</apex:page>
+
+<!-- https://power-agility-487-dev-ed--c.scratch.vf.force.com/apex/toolbarExample -->
