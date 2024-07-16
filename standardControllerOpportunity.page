@@ -1,0 +1,19 @@
+<apex:page standardController="Opportunity">
+    <apex:form >
+        <apex:pageBlock title="Opportunity Block">
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Delete this Record" action="{!delete}" />
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection title="Opportunity Section">
+                <apex:inputField value="{!opportunity.Name}" />
+                <apex:inputField value="{!opportunity.CloseDate}" />
+                <apex:inputField value="{!opportunity.StageName}" />
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
+<!-- 
+To activate the delete button, use this sample record id:
+https://power-agility-487-dev-ed--c.scratch.vf.force.com/apex/standardControllerOpportunity?id=0068I0000088Y4EQAU
+You could have used <apex:outputField> since it's delete, no use to edit the fields.
+-->
