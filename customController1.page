@@ -1,0 +1,14 @@
+<apex:page controller="AccountCustomController" >
+    <apex:form >
+        <apex:pageBlock title="Congratulations {!$User.FirstName}">
+            You belong to the Account Name: <apex:inputField value="{!account.Name}" />
+            <apex:commandButton action="{!savetheRecord}" value="Save" />
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
+
+<!--
+Test URL   : https://power-agility-487-dev-ed--c.scratch.vf.force.com/apex/customController1?id=0018I00000pSWuj
+Id         : 0018I00000pSWuj (Deepika Acccount Test)
+Apex class : AccountCustomController()
+-->
