@@ -1,0 +1,20 @@
+<apex:page controller="NewAndExistingController">
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockSection >
+                <apex:inputField value="{!account.Name}" />
+                <apex:inputField value="{!account.Phone}" />
+                <apex:inputField value="{!account.Industry}" />
+            </apex:pageBlockSection>
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Save" action="{!save}" />
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
+<!--
+Custom Controller upsert example (update / insert)
+If id is NOT present in the URL then insert record
+If id is present in the URL then update record
+Test URL (update) : https://power-agility-487-dev-ed--c.scratch.vf.force.com/apex/customController2?id=0018I00000pSuwJ
+-->
