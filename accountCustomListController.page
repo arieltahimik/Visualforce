@@ -1,0 +1,14 @@
+<apex:page controller="AccountListController">
+        <apex:pageBlock >
+        <apex:pageBlockTable value="{!accounts}" var="a">
+            <apex:column value="{!a.Id}"/>
+            <apex:column value="{!a.Name}"/>
+            <apex:column value="{!a.AccountNumber}"/>
+            <apex:column value="{!a.Rating}"/>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+</apex:page>
+<!--
+Calls AccountListController class
+accounts => calls getAccounts() method
+-->
