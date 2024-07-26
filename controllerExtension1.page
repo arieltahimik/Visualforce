@@ -1,0 +1,14 @@
+<apex:page standardController="Account" extensions="myControllerExtension">
+    {!greeting}
+    <apex:form >
+        <apex:inputField value="{!account.name}" />
+        <apex:commandButton value="Save" action="{!save}" />
+    </apex:form>
+</apex:page>
+<!--
+Hints:
+custom object/s here: greeting (defined in myControllerExtension)
+standard objects    : save (built-in in standardController)
+URL test with existing record (Aramina Account test):
+https://power-agility-487-dev-ed--c.scratch.vf.force.com/apex/controllerExtension1?id=0018I00000pSuxR
+-->
