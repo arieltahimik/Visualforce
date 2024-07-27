@@ -1,0 +1,10 @@
+<apex:page>
+<!-- I am a single line comment -->
+<h1>Hello World</h1>
+<p>This is my first Visualforce page.</p>
+<!--
+    I am a
+    Multi-line
+    comment!
+-->
+</apex:page>
